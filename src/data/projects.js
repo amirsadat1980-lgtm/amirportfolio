@@ -1,59 +1,44 @@
-import { Wand2, Smartphone, Terminal, Workflow, Megaphone } from "lucide-react";
-import { YoutubeIcon } from "@/components/icons/BrandIcons";
+import { Library, Workflow, FlaskConical, Bot } from "lucide-react";
 
 export const projects = [
   {
-    title: "ContentCraft AI",
-    category: "AI Content Creation",
-    description:
-      "An AI-assisted content pipeline that turns a single brief into on-brand copy, captions, and visuals ready for publishing.",
-    icon: Wand2,
-    tech: ["Python", "GPT-4", "Next.js", "Tailwind CSS"],
-    detailed: true,
-    comingSoon: true,
-  },
-  {
-    title: "PromptForge",
+    title: "AI Prompt Engineering Portfolio",
     category: "Prompt Engineering",
     description:
-      "A prompt engineering workbench for versioning, testing, and benchmarking prompts across multiple LLMs side by side.",
-    icon: Terminal,
-    tech: ["Python", "LangChain", "OpenAI API", "Streamlit"],
+      "A collection of advanced prompts for reasoning, automation, coding, and business workflows across multiple LLMs.",
+    icon: Library,
+    tech: ["GPT-4", "Claude", "LangChain", "Python"],
     detailed: true,
     comingSoon: true,
   },
   {
-    title: "FlowPilot",
+    title: "AI Workflow Automation",
     category: "AI Workflow Automation",
     description:
-      "An automation layer that chains AI models and APIs into multi-step workflows, replacing manual copy-paste handoffs.",
+      "End-to-end prompt workflows that integrate multiple AI models into reliable production-ready pipelines.",
     icon: Workflow,
-    tech: ["Node.js", "n8n", "REST APIs", "Docker"],
+    tech: ["Python", "LangChain", "REST APIs", "n8n"],
     detailed: true,
     comingSoon: true,
   },
   {
-    title: "YouTube Video Production",
-    category: "Video",
-    description: "End-to-end production pipeline for long-form YouTube content, from script to edit.",
-    icon: YoutubeIcon,
-    detailed: false,
+    title: "Prompt Evaluation Framework",
+    category: "Prompt Engineering",
+    description:
+      "A framework for testing, comparing, benchmarking, and improving prompt quality across different LLMs.",
+    icon: FlaskConical,
+    tech: ["Python", "OpenAI API", "Pandas", "Streamlit"],
+    detailed: true,
     comingSoon: true,
   },
   {
-    title: "Short-form Reels",
-    category: "Video",
-    description: "Punchy, algorithm-friendly vertical video content for Reels, Shorts, and TikTok.",
-    icon: Smartphone,
-    detailed: false,
-    comingSoon: true,
-  },
-  {
-    title: "Social Media Strategy",
-    category: "Growth",
-    description: "Data-informed strategy and content calendars to grow engagement across platforms.",
-    icon: Megaphone,
-    detailed: false,
+    title: "AI Assistant Systems",
+    category: "AI Assistants",
+    description:
+      "Intelligent assistants built with prompt engineering, tool calling, memory, and structured workflows.",
+    icon: Bot,
+    tech: ["Python", "LangChain", "Function Calling", "Vector DB"],
+    detailed: true,
     comingSoon: true,
   },
 ];
