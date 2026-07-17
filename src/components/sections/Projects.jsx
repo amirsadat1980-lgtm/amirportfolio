@@ -44,16 +44,28 @@ export function Projects() {
                         </ul>
 
                         <div className="mt-5 flex flex-wrap justify-center gap-3">
-                          <span
-                            title="Coming soon"
-                            aria-disabled="true"
-                            role="link"
-                            tabIndex={-1}
-                            className="inline-flex cursor-not-allowed items-center gap-1.5 rounded-md border border-border px-3 py-1.5 text-xs font-semibold text-muted-foreground"
-                          >
-                            <GithubIcon className="size-3.5" />
-                            GitHub
-                          </span>
+                          {project.githubUrl ? (
+                            <a
+                              href={project.githubUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center gap-1.5 rounded-md border border-border px-3 py-1.5 text-xs font-semibold text-muted-foreground"
+                            >
+                              <GithubIcon className="size-3.5" />
+                              GitHub
+                            </a>
+                          ) : (
+                            <span
+                              title="Coming soon"
+                              aria-disabled="true"
+                              role="link"
+                              tabIndex={-1}
+                              className="inline-flex cursor-not-allowed items-center gap-1.5 rounded-md border border-border px-3 py-1.5 text-xs font-semibold text-muted-foreground"
+                            >
+                              <GithubIcon className="size-3.5" />
+                              GitHub
+                            </span>
+                          )}
                           <span
                             title="Coming soon"
                             aria-disabled="true"

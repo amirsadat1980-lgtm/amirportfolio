@@ -29,7 +29,8 @@ export const projects = [
     icon: FlaskConical,
     tech: ["Python", "OpenAI API", "Pandas", "Streamlit"],
     detailed: true,
-    comingSoon: true,
+    comingSoon: false,
+    githubUrl: "https://github.com/amirsadat1980-lgtm/prompt-evaluation-framework",
   },
   {
     title: "AI Assistant Systems",
