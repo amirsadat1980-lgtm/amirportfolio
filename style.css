@@ -140,6 +140,57 @@ ul {
   margin-bottom: 1.1rem;
 }
 
+.project-card--detailed {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.4rem;
+  margin-bottom: 1.1rem;
+}
+
+.tech-tags li {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #2b2d42;
+  background: transparent;
+  border: 1px solid #d3d4e8;
+  padding: 0.25rem 0.65rem;
+  border-radius: 1rem;
+}
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-bottom: 1.1rem;
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #9a9bb5;
+  border: 1px solid #e5e5f0;
+  padding: 0.35rem 0.75rem;
+  border-radius: 0.5rem;
+  cursor: not-allowed;
+  user-select: none;
+}
+
+.project-link svg {
+  width: 0.9rem;
+  height: 0.9rem;
+}
+
 .badge {
   display: inline-block;
   background: #2b2d42;
