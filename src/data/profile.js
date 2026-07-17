@@ -8,5 +8,5 @@ export const profile = {
     "I'm Amir Sadat, a prompt engineer focused on designing and refining prompts that get the most out of large language models. I love solving problems at the intersection of AI capability and real-world usability.",
   email: "amir.sadat1980@gmail.com",
   github: "https://github.com/amirsadat1980-lgtm",
-  linkedin: "#",
+  linkedin: "https://www.linkedin.com/in/amir-sadat-442349168/",
 };
