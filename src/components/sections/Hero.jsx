@@ -34,6 +34,13 @@ export function Hero() {
 
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
 
+      <div
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background: "radial-gradient(45% 55% at 50% 48%, rgba(3,8,7,0.55), transparent 72%)",
+        }}
+      />
+
       <motion.div
         variants={container}
         initial="hidden"
@@ -47,13 +54,16 @@ export function Hero() {
           <span className="text-gradient glow-text">{profile.name}</span>
         </motion.h1>
 
-        <motion.p variants={item} className="mt-4 text-lg font-semibold text-foreground/90 sm:text-xl">
+        <motion.p
+          variants={item}
+          className="text-shadow-soft mt-4 text-lg font-semibold text-foreground sm:text-xl"
+        >
           {profile.role}
         </motion.p>
 
         <motion.p
           variants={item}
-          className="mt-6 max-w-2xl text-balance text-base leading-relaxed text-muted-foreground sm:text-lg"
+          className="text-shadow-soft mt-6 max-w-2xl text-balance text-base leading-relaxed text-foreground/85 sm:text-lg"
         >
           {profile.headline}
         </motion.p>

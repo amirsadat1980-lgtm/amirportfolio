@@ -20,7 +20,7 @@
   --secondary-foreground: #b9ffe3;
 
   --muted: #0b1712;
-  --muted-foreground: #8caa9c;
+  --muted-foreground: #b3ccc0;
 
   --accent: #00c389;
   --accent-foreground: #001208;
@@ -123,6 +123,12 @@
 
   .glow-text {
     text-shadow: 0 0 30px rgba(26, 255, 168, 0.45);
+  }
+
+  .text-shadow-soft {
+    text-shadow:
+      0 2px 18px rgba(0, 0, 0, 0.65),
+      0 1px 3px rgba(0, 0, 0, 0.55);
   }
 
   .glow-border {

@@ -35,7 +35,7 @@ export function Navbar() {
               <li key={link.href}>
                 <a
                   href={link.href}
-                  className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+                  className="text-shadow-soft text-sm font-medium text-foreground/90 transition-colors hover:text-primary"
                 >
                   {link.label}
                 </a>
@@ -46,7 +46,12 @@ export function Navbar() {
 
         <Sheet open={open} onOpenChange={setOpen}>
           <SheetTrigger asChild>
-            <Button variant="ghost" size="icon" className="md:hidden" aria-label="Open menu">
+            <Button
+              variant="ghost"
+              size="icon"
+              className="md:hidden drop-shadow-[0_2px_10px_rgba(0,0,0,0.6)]"
+              aria-label="Open menu"
+            >
               <Menu className="size-5" />
             </Button>
           </SheetTrigger>
