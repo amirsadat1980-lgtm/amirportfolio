@@ -30,4 +30,4 @@ Pushing to `master` triggers `.github/workflows/deploy.yml`, which builds the si
 
 To enable it the first time: in the repo's **Settings → Pages**, set **Source** to **GitHub Actions**.
 
-The site is served from `/my-first-website/` (configured via `base` in `vite.config.js`) to match this repo's GitHub Pages URL.
+The site is served from `/amirportfolio/` (configured via `base` in `vite.config.js`) to match this repo's GitHub Pages URL.
