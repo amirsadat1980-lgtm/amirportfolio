@@ -3,32 +3,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Amir Sadat's portfolio: prompt engineer specializing in AI workflows and LLM-driven solutions.">
-  <title>Amir Sadat</title>
+  <meta name="description" content="Amir Sadat — Prompt Engineer & AI Systems Builder specializing in reliable, production-ready LLM workflows and AI automation.">
+  <title>Amir Sadat — Prompt Engineer &amp; AI Systems Builder</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header>
-    <h1>Amir Sadat</h1>
-    <p class="tagline">Prompt Engineer</p>
-    <nav>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#links">Contact</a></li>
-      </ul>
-    </nav>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="#top">Amir Sadat</a>
+      <nav>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-menu">
+          <span></span><span></span><span></span>
+        </button>
+        <ul id="nav-menu">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#links">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
+  <section class="hero" id="top">
+    <div class="hero-inner">
+      <p class="hero-eyebrow">Hi, I'm</p>
+      <h1 class="hero-title">Amir Sadat</h1>
+      <p class="hero-role">Prompt Engineer &amp; AI Systems Builder</p>
+      <p class="hero-headline">I design and engineer reliable AI systems — turning complex prompts into production-ready LLM workflows that actually ship.</p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">View My Work</a>
+        <a href="#links" class="btn btn-secondary">Get In Touch</a>
+      </div>
+    </div>
+  </section>
+
   <main>
-    <section id="about">
+    <section id="about" class="reveal">
       <h2>About Me</h2>
       <p>I'm Amir Sadat, a prompt engineer focused on designing and refining prompts that get the most out of large language models. I love solving problems at the intersection of AI capability and real-world usability.</p>
     </section>
 
-    <section id="skills">
+    <section id="skills" class="reveal">
       <h2>Skills</h2>
       <ul>
         <li>Prompt Engineering</li>
@@ -37,7 +57,7 @@
       </ul>
     </section>
 
-    <section id="projects">
+    <section id="projects" class="reveal">
       <h2>Projects</h2>
       <div class="project-grid">
         <div class="project-card project-card--detailed">
@@ -144,7 +164,7 @@
       </div>
     </section>
 
-    <section id="links">
+    <section id="links" class="reveal">
       <h2>Find Me Online</h2>
       <ul>
         <li><a href="https://github.com/amirsadat1980-lgtm" target="_blank" rel="noopener">GitHub</a></li>
@@ -153,9 +173,30 @@
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2026 Amir</p>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-name">Amir Sadat</p>
+      <ul class="footer-socials">
+        <li>
+          <a href="https://github.com/amirsadat1980-lgtm" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.49-1.11-1.49-.91-.64.07-.63.07-.63 1 .07 1.53 1.05 1.53 1.05.89 1.57 2.34 1.12 2.91.86.09-.66.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.73 0 0 .84-.28 2.75 1.05a9.24 9.24 0 015 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.42.2 2.47.1 2.73.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.26 10.26 0 0022 12.25C22 6.58 17.52 2 12 2z"/></svg>
+          </a>
+        </li>
+        <li>
+          <a href="#" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.94 5a2 2 0 11-4-.002 2 2 0 014 .002zM7 8.48H3V21h4V8.48zM13.32 8.48H9.34V21h3.98v-6.4c0-3.42 4.42-3.7 4.42 0V21h4v-7.32c0-6.24-6.99-6-8.42-2.94V8.48z"/></svg>
+          </a>
+        </li>
+        <li>
+          <a href="mailto:amir.sadat1980@gmail.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="M3 6l9 7 9-7"/></svg>
+          </a>
+        </li>
+      </ul>
+      <p class="footer-copy">&copy; 2026 Amir Sadat. All rights reserved.</p>
+    </div>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
