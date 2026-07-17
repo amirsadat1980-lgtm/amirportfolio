@@ -29,10 +29,6 @@ export function Navbar() {
       }`}
     >
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
-        <a href="#top" className="font-display text-lg font-bold tracking-tight text-gradient">
-          Amir Sadat
-        </a>
-
         <nav className="hidden md:block">
           <ul className="flex items-center gap-8">
             {links.map((link) => (
@@ -55,7 +51,7 @@ export function Navbar() {
             </Button>
           </SheetTrigger>
           <SheetContent side="right" className="glass border-l-border">
-            <SheetTitle className="px-4 pt-4 text-gradient">Amir Sadat</SheetTitle>
+            <SheetTitle className="px-4 pt-4 text-gradient">Menu</SheetTitle>
             <nav className="mt-4 flex flex-col gap-2 px-4">
               {links.map((link) => (
                 <a

@@ -40,13 +40,6 @@ export function Hero() {
         animate="show"
         className="relative z-10 mx-auto flex max-w-3xl flex-col items-center px-6 text-center"
       >
-        <motion.span
-          variants={item}
-          className="glass rounded-full px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-primary"
-        >
-          {profile.eyebrow} {profile.name}
-        </motion.span>
-
         <motion.h1
           variants={item}
           className="font-display mt-6 text-5xl font-bold tracking-tight text-balance sm:text-6xl md:text-7xl"
