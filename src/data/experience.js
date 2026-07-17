@@ -10,9 +10,9 @@ export const experience = [
   },
   {
     period: "Ongoing",
-    title: "Deep Focus: Prompt Engineering",
+    title: "Deep Focus: AI Systems Engineering",
     description:
-      "Studying and applying prompt design patterns, evaluation methods, and LLM behavior across model families.",
+      "Deepening my expertise in designing, integrating, and optimizing intelligent AI systems, with a focus on reliable workflows, automation, and real-world applications.",
     icon: Brain,
   },
   {
