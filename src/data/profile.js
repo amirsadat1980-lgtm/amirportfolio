@@ -5,7 +5,7 @@ export const profile = {
   headline:
     "I design and build intelligent AI systems that transform complex ideas into reliable, scalable, and production-ready solutions.",
   about:
-    "I'm Amir Sadat, a prompt engineer focused on designing and refining prompts that get the most out of large language models. I love solving problems at the intersection of AI capability and real-world usability.",
+    "I'm Amir Sadat, an AI systems builder focused on designing intelligent, reliable, and practical AI solutions. I enjoy turning complex ideas into scalable systems that combine powerful AI capabilities with real-world usability.",
   email: "amir.sadat1980@gmail.com",
   github: "https://github.com/amirsadat1980-lgtm",
   linkedin: "#",
