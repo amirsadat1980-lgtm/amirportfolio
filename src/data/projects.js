@@ -10,6 +10,7 @@ export const projects = [
     tech: ["Python", "OpenAI API", "LangChain", "Vector Database", "RAG"],
     detailed: true,
     status: "Case Study",
+    githubUrl: "https://github.com/amirsadat1980-lgtm/rag-knowledge-assistant",
   },
   {
     title: "AI Content Quality Workflow",
