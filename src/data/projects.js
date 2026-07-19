@@ -1,25 +1,25 @@
-import { Library, Workflow, FlaskConical, Bot } from "lucide-react";
+import { Database, ClipboardCheck, FlaskConical, ShieldCheck } from "lucide-react";
 
 export const projects = [
   {
-    title: "AI Prompt Engineering Portfolio",
-    category: "Prompt Engineering",
+    title: "RAG Knowledge Assistant",
+    category: "AI Assistants",
     description:
-      "A collection of advanced prompts for reasoning, automation, coding, and business workflows across multiple LLMs.",
-    icon: Library,
-    tech: ["GPT-4", "Claude", "LangChain", "Python"],
+      "A retrieval-augmented AI assistant designed to answer questions from a private knowledge base with grounded, source-aware responses.",
+    icon: Database,
+    tech: ["Python", "OpenAI API", "LangChain", "Vector Database", "RAG"],
     detailed: true,
-    comingSoon: true,
+    status: "Case Study",
   },
   {
-    title: "AI Workflow Automation",
+    title: "AI Content Quality Workflow",
     category: "AI Workflow Automation",
     description:
-      "End-to-end prompt workflows that integrate multiple AI models into reliable production-ready pipelines.",
-    icon: Workflow,
-    tech: ["Python", "LangChain", "REST APIs", "n8n"],
+      "An AI workflow that generates, evaluates, and improves marketing content using structured prompts, quality criteria, and human-review checkpoints.",
+    icon: ClipboardCheck,
+    tech: ["Prompt Engineering", "OpenAI API", "Python", "Automation", "Content QA"],
     detailed: true,
-    comingSoon: true,
+    status: "In Development",
   },
   {
     title: "Prompt Evaluation Framework",
@@ -29,17 +29,16 @@ export const projects = [
     icon: FlaskConical,
     tech: ["Python", "OpenAI API", "Pandas", "Streamlit"],
     detailed: true,
-    comingSoon: false,
     githubUrl: "https://github.com/amirsadat1980-lgtm/prompt-evaluation-framework",
   },
   {
-    title: "AI Assistant Systems",
-    category: "AI Assistants",
+    title: "Prompt Safety & Evaluation Toolkit",
+    category: "Prompt Engineering",
     description:
-      "Intelligent assistants built with prompt engineering, tool calling, memory, and structured workflows.",
-    icon: Bot,
-    tech: ["Python", "LangChain", "Function Calling", "Vector DB"],
+      "A practical prompt-testing toolkit for measuring response quality, consistency, safety, and edge-case behavior across AI assistant workflows.",
+    icon: ShieldCheck,
+    tech: ["Prompt Evaluation", "Python", "Test Cases", "LLM Safety", "Analytics"],
     detailed: true,
-    comingSoon: true,
+    status: "Case Study",
   },
 ];

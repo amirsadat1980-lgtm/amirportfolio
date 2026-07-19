@@ -81,9 +81,9 @@ export function Projects() {
                     )}
 
                     <div className="mt-auto pt-5">
-                      {project.comingSoon && (
+                      {project.status && (
                         <Badge className="bg-primary text-primary-foreground uppercase tracking-wider">
-                          Coming Soon
+                          {project.status}
                         </Badge>
                       )}
                     </div>
