@@ -1,0 +1,19 @@
+name = "amirportfolio-rag-demo"
+main = "src/index.js"
+compatibility_date = "2026-07-01"
+
+# Create with: wrangler kv namespace create RATE_LIMIT
+# then paste the returned id below.
+kv_namespaces = [
+  { binding = "RATE_LIMIT", id = "326e078fd7ab464fae8f2ecb9109e51a" }
+]
+
+# Comma-separated origins allowed to call this Worker: production site +
+# local Vite dev server (for testing only — remove localhost before any
+# wider launch if you don't want local testing left open indefinitely).
+[vars]
+ALLOWED_ORIGINS = "https://amirsadat1980-lgtm.github.io,http://localhost:5173"
+
+# OPENAI_API_KEY is a secret, not a var: set it with
+#   wrangler secret put OPENAI_API_KEY
+# Never add it to this file.
