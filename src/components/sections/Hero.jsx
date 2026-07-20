@@ -1,8 +1,14 @@
+import { lazy, Suspense } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import Scene from "@/components/three/Scene";
 import { profile } from "@/data/profile";
+
+// The 3D scene pulls in three.js, by far the largest dependency in this
+// app. Splitting it into its own chunk keeps the initial page load light;
+// the gradient backgrounds already render immediately, so the wireframe
+// shape simply fades in a moment later once its chunk arrives.
+const Scene = lazy(() => import("@/components/three/Scene"));
 
 const container = {
   hidden: {},
@@ -30,7 +36,9 @@ export function Hero() {
         }}
       />
 
-      <Scene className="opacity-90" />
+      <Suspense fallback={null}>
+        <Scene className="opacity-90" />
+      </Suspense>
 
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
 
