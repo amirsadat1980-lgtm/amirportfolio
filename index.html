@@ -9,6 +9,20 @@
       content="Amir Sadat — Prompt Engineer & AI Systems Builder. Designing reliable, production-ready LLM workflows and AI automation."
     />
     <title>Amir Sadat — Prompt Engineer & AI Systems Builder</title>
+    <!--
+      GitHub Pages is static hosting and cannot set custom HTTP response
+      headers, so X-Content-Type-Options, Permissions-Policy, and the CSP
+      frame-ancestors directive (clickjacking protection) can't be applied
+      here — browsers only honor those via real headers, not <meta>. HSTS
+      is a non-issue: *.github.io is on the browser HSTS-preload list, so
+      HTTPS is already enforced regardless of any header this site sends.
+      See SECURITY_AUDIT.md (M3) for the full rationale.
+    -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"
+    />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
