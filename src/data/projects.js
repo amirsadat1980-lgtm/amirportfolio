@@ -20,7 +20,8 @@ export const projects = [
     icon: ClipboardCheck,
     tech: ["Prompt Engineering", "OpenAI API", "Python", "Automation", "Content QA"],
     detailed: true,
-    status: "In Development",
+    status: "Case Study",
+    githubUrl: "https://github.com/amirsadat1980-lgtm/ai-content-quality-workflow",
   },
   {
     title: "Prompt Evaluation Framework",
@@ -41,5 +42,6 @@ export const projects = [
     tech: ["Prompt Evaluation", "Python", "Test Cases", "LLM Safety", "Analytics"],
     detailed: true,
     status: "Case Study",
+    githubUrl: "https://github.com/amirsadat1980-lgtm/prompt-safety-toolkit",
   },
 ];
