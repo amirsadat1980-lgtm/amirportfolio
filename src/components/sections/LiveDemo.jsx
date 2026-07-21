@@ -1,8 +1,10 @@
 import { useState } from "react";
-import { Loader2, Sparkles } from "lucide-react";
+import { AnimatePresence, motion } from "framer-motion";
+import { ChevronDown, Loader2, Sparkles } from "lucide-react";
 import { Reveal } from "@/components/motion/Reveal";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
 const DEMO_API_URL = import.meta.env.VITE_DEMO_API_URL;
 const MIN_LENGTH = 3;
@@ -19,7 +21,17 @@ export function LiveDemo() {
   const [status, setStatus] = useState("idle"); // idle | loading | success | error
   const [answer, setAnswer] = useState(null);
   const [sources, setSources] = useState([]);
+  const [expandedSources, setExpandedSources] = useState(() => new Set());
   const [errorMessage, setErrorMessage] = useState("");
+
+  function toggleSource(index) {
+    setExpandedSources((prev) => {
+      const next = new Set(prev);
+      if (next.has(index)) next.delete(index);
+      else next.add(index);
+      return next;
+    });
+  }
 
   const trimmed = question.trim();
   const isValid = trimmed.length >= MIN_LENGTH && trimmed.length <= MAX_LENGTH;
@@ -31,6 +43,7 @@ export function LiveDemo() {
     setStatus("loading");
     setErrorMessage("");
     setAnswer(null);
+    setExpandedSources(new Set());
 
     try {
       const res = await fetch(`${DEMO_API_URL}/api/demo`, {
@@ -48,7 +61,9 @@ export function LiveDemo() {
       }
 
       setAnswer(data.answer);
-      setSources(data.sources ?? []);
+      // sourceDetails carries the actual retrieved passage text; fall back to
+      // title-only entries so older cached responses still render something.
+      setSources(data.sourceDetails ?? (data.sources ?? []).map((title) => ({ title, text: null })));
       setStatus("success");
     } catch {
       setErrorMessage("Couldn't reach the demo backend. Please try again shortly.");
@@ -135,15 +150,44 @@ export function LiveDemo() {
                 <div className="mt-6 border-t border-border pt-5">
                   <p className="text-sm leading-relaxed text-foreground/90">{answer}</p>
                   {sources.length > 0 && (
-                    <ul className="mt-4 flex flex-wrap gap-2">
-                      {sources.map((s) => (
-                        <li
-                          key={s}
-                          className="rounded-full border border-border px-3 py-1 text-xs text-primary/90"
-                        >
-                          {s}
-                        </li>
-                      ))}
+                    <ul className="mt-4 flex flex-col gap-2">
+                      {sources.map((source, i) => {
+                        const isOpen = expandedSources.has(i);
+                        const hasText = Boolean(source.text);
+                        return (
+                          <li key={source.title}>
+                            <button
+                              type="button"
+                              onClick={() => hasText && toggleSource(i)}
+                              aria-expanded={isOpen}
+                              disabled={!hasText}
+                              className="flex w-full items-center justify-between gap-2 rounded-lg border border-border px-3 py-1.5 text-xs text-primary/90 transition-colors hover:bg-white/5 disabled:cursor-default disabled:hover:bg-transparent"
+                            >
+                              <span>{source.title}</span>
+                              {hasText && (
+                                <ChevronDown
+                                  className={cn("size-3.5 shrink-0 transition-transform", isOpen && "rotate-180")}
+                                />
+                              )}
+                            </button>
+                            <AnimatePresence initial={false}>
+                              {isOpen && hasText && (
+                                <motion.div
+                                  initial={{ height: 0, opacity: 0 }}
+                                  animate={{ height: "auto", opacity: 1 }}
+                                  exit={{ height: 0, opacity: 0 }}
+                                  transition={{ duration: 0.25, ease: "easeOut" }}
+                                  className="overflow-hidden"
+                                >
+                                  <p className="mt-2 rounded-md border border-border bg-background/40 p-3 text-xs leading-relaxed text-muted-foreground">
+                                    {source.text}
+                                  </p>
+                                </motion.div>
+                              )}
+                            </AnimatePresence>
+                          </li>
+                        );
+                      })}
                     </ul>
                   )}
                 </div>

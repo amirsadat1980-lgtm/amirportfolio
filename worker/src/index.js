@@ -221,6 +221,7 @@ export default {
       return jsonResponse(200, {
         answer,
         sources: chunks.map((c) => c.title),
+        sourceDetails: chunks.map((c) => ({ title: c.title, text: c.text })),
       }, cors);
     } catch (err) {
       console.error("demo_request_failed", err.message);
