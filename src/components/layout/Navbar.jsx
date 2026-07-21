@@ -15,6 +15,19 @@ export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
+  // The Sheet locks body scroll while open and only releases it once its
+  // close transition finishes (~300ms). Scrolling immediately on click races
+  // that lock and silently no-ops, so the target section is reached only
+  // after the menu has actually finished closing.
+  const handleMobileLinkClick = (href) => (event) => {
+    event.preventDefault();
+    setOpen(false);
+    window.setTimeout(() => {
+      document.querySelector(href)?.scrollIntoView({ behavior: "smooth", block: "start" });
+      history.pushState(null, "", href);
+    }, 320);
+  };
+
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
     onScroll();
@@ -62,7 +75,7 @@ export function Navbar() {
                 <a
                   key={link.href}
                   href={link.href}
-                  onClick={() => setOpen(false)}
+                  onClick={handleMobileLinkClick(link.href)}
                   className="rounded-md px-2 py-3 text-base font-medium text-foreground/90 transition-colors hover:bg-white/5 hover:text-primary"
                 >
                   {link.label}
