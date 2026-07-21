@@ -7,7 +7,7 @@ export const projects = [
     title: "RAG Knowledge Assistant",
     category: "AI Assistants",
     description:
-      "A retrieval-augmented AI assistant designed to answer questions from a private knowledge base with grounded, source-aware responses.",
+      "A retrieval-augmented assistant that cites its source document for every answer and explicitly declines to guess when the documents don't cover a question — verified by 21 automated tests covering ingestion, retrieval, and source attribution.",
     icon: Database,
     tech: ["Python", "OpenAI API", "LangChain", "Vector Database", "RAG"],
     detailed: true,
@@ -20,7 +20,7 @@ export const projects = [
     title: "AI Content Quality Workflow",
     category: "AI Workflow Automation",
     description:
-      "An AI workflow that generates, evaluates, and improves marketing content using structured prompts, quality criteria, and human-review checkpoints.",
+      "An automated content-QA pipeline that scores drafts against five criteria (length, keywords, CTA, banned terms, readability) and applies deterministic fixes — with 20 tests covering every scorer and the revision logic.",
     icon: ClipboardCheck,
     tech: ["Prompt Engineering", "OpenAI API", "Python", "Automation", "Content QA"],
     detailed: true,
@@ -33,7 +33,7 @@ export const projects = [
     title: "Prompt Evaluation Framework",
     category: "Prompt Engineering",
     description:
-      "A framework for testing, comparing, benchmarking, and improving prompt quality across different LLMs.",
+      "A five-criteria evaluation harness (accuracy, relevance, clarity, consistency, instruction-following) for comparing prompt versions with reproducible, offline-scored results — 27 tests, plus a real sample run showing a concrete length-vs-fidelity tradeoff between three prompt iterations.",
     icon: FlaskConical,
     tech: ["Python", "OpenAI API", "Pandas", "Streamlit"],
     detailed: true,
@@ -45,7 +45,7 @@ export const projects = [
     title: "Prompt Safety & Evaluation Toolkit",
     category: "Prompt Engineering",
     description:
-      "A practical prompt-testing toolkit for measuring response quality, consistency, safety, and edge-case behavior across AI assistant workflows.",
+      "A safety-testing harness that checks whether a system prompt actually refuses unsafe requests, resists prompt injection, and stays consistent across repeated runs — in the bundled example, a well-specified prompt scored 100% consistency versus 64% for a bare \"you are a helpful assistant\" prompt.",
     icon: ShieldCheck,
     tech: ["Prompt Evaluation", "Python", "Test Cases", "LLM Safety", "Analytics"],
     detailed: true,

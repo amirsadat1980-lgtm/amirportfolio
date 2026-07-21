@@ -3,17 +3,17 @@ import { Sparkles, Workflow, Cpu } from "lucide-react";
 export const skills = [
   {
     name: "Prompt Engineering",
-    description: "Designing, versioning, and testing prompts that reliably get the best out of LLMs.",
+    description: "Designing, versioning, and evaluating prompts against explicit test cases and scoring criteria — not just iterating by feel.",
     icon: Sparkles,
   },
   {
     name: "LLM Workflows",
-    description: "Chaining models, tools, and data sources into dependable, production-ready pipelines.",
+    description: "Building retrieval-augmented pipelines and automation workflows that connect LLMs, vector databases, and real data sources.",
     icon: Workflow,
   },
   {
     name: "AI Systems Design",
-    description: "Architecting AI-powered systems that are usable, observable, and built to scale.",
+    description: "Architecting AI systems with production concerns built in — rate limiting, input validation, and automated testing, not just a working demo.",
     icon: Cpu,
   },
 ];

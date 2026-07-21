@@ -5,14 +5,14 @@ export const experience = [
     period: "Now",
     title: "Building AI Automation & Workflow Tools",
     description:
-      "Designing prompt-driven systems and automation pipelines that connect LLMs to real tools and data.",
+      "Building and testing LLM-backed systems — a RAG assistant, an evaluation framework, and a safety-testing toolkit — each with its own automated test suite.",
     icon: Hammer,
   },
   {
     period: "Ongoing",
     title: "Deep Focus: Prompt Engineering",
     description:
-      "Studying and applying prompt design patterns, evaluation methods, and LLM behavior across model families.",
+      "Applying evaluation criteria — accuracy, clarity, consistency, safety — to measure whether a prompt change is actually an improvement, not just a guess.",
     icon: Brain,
   },
   {
