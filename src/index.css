@@ -105,6 +105,11 @@
     color-scheme: dark;
   }
 
+  /* Keeps anchor-scrolled sections from landing underneath the fixed navbar (h-16). */
+  main > section[id] {
+    scroll-margin-top: 5rem;
+  }
+
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-sans);
