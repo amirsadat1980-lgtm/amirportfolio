@@ -16,6 +16,8 @@ dist-ssr
 .env
 .env.*
 !.env.example
+# .env.production holds only the public Worker URL, not a secret — safe to commit
+!.env.production
 worker/.dev.vars
 worker/.dev.vars.*
 !worker/.dev.vars.example
