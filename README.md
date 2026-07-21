@@ -15,6 +15,17 @@ Each project below is a real, standalone repository with its own test suite and 
 | Prompt Evaluation Framework | [Demo](https://amirsadat1980-lgtm.github.io/prompt-evaluation-framework/) | [GitHub](https://github.com/amirsadat1980-lgtm/prompt-evaluation-framework) |
 | Prompt Safety & Evaluation Toolkit | [Demo](https://amirsadat1980-lgtm.github.io/prompt-safety-toolkit/) | [GitHub](https://github.com/amirsadat1980-lgtm/prompt-safety-toolkit) |
 
+## Live RAG Q&A demo
+
+The site includes a "Try It Live" section where visitors can ask a question and get a real, grounded answer — a small retrieval-augmented-generation (RAG) pipeline backed by a real OpenAI API call.
+
+- **Frontend:** [`src/components/sections/LiveDemo.jsx`](src/components/sections/LiveDemo.jsx) — a question box that posts to a Cloudflare Worker.
+- **Backend:** [`worker/`](worker) — a standalone Cloudflare Worker, deployed separately from the static site. It embeds the visitor's question, does a cosine-similarity search over a small precomputed knowledge base ([`worker/src/knowledge.js`](worker/src/knowledge.js)), and asks OpenAI (`gpt-4o-mini` via the Responses API) to answer using only the retrieved context.
+- **The OpenAI API key never touches the frontend.** It's stored as a Cloudflare Worker secret and only ever used server-side.
+- **Abuse protection:** CORS restricted to this site's real origin, per-IP rate limiting (5/hour) and a global daily cap, enforced via Workers KV; strict input validation (3–300 characters, size-capped request body); generic error responses that never leak upstream details.
+
+See [`worker/wrangler.toml`](worker/wrangler.toml) and [`worker/package.json`](worker/package.json) for the Worker's own dev/deploy commands (`npm run build-embeddings`, `npm run deploy`, etc.) — it's developed and deployed independently of the Vite frontend via Wrangler.
+
 ## Stack
 
 - [Vite](https://vite.dev/) + React
