@@ -59,7 +59,7 @@ export function Projects() {
                               href={project.githubUrl}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="inline-flex items-center gap-1.5 rounded-md border border-border px-3 py-1.5 text-xs font-semibold text-muted-foreground"
+                              className="inline-flex min-h-11 items-center gap-1.5 rounded-md border border-border px-3 py-1.5 text-xs font-semibold text-muted-foreground"
                             >
                               <GithubIcon className="size-3.5" />
                               GitHub
@@ -70,7 +70,7 @@ export function Projects() {
                               aria-disabled="true"
                               role="link"
                               tabIndex={-1}
-                              className="inline-flex cursor-not-allowed items-center gap-1.5 rounded-md border border-border px-3 py-1.5 text-xs font-semibold text-muted-foreground"
+                              className="inline-flex min-h-11 cursor-not-allowed items-center gap-1.5 rounded-md border border-border px-3 py-1.5 text-xs font-semibold text-muted-foreground"
                             >
                               <GithubIcon className="size-3.5" />
                               GitHub
@@ -81,7 +81,7 @@ export function Projects() {
                               href={project.liveDemo}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="inline-flex items-center gap-1.5 rounded-md border border-primary bg-primary/10 px-3 py-1.5 text-xs font-semibold text-primary"
+                              className="inline-flex min-h-11 items-center gap-1.5 rounded-md border border-primary bg-primary/10 px-3 py-1.5 text-xs font-semibold text-primary"
                             >
                               <ExternalLink className="size-3.5" />
                               Live Demo
@@ -92,7 +92,7 @@ export function Projects() {
                               aria-disabled="true"
                               role="link"
                               tabIndex={-1}
-                              className="inline-flex cursor-not-allowed items-center gap-1.5 rounded-md border border-border px-3 py-1.5 text-xs font-semibold text-muted-foreground"
+                              className="inline-flex min-h-11 cursor-not-allowed items-center gap-1.5 rounded-md border border-border px-3 py-1.5 text-xs font-semibold text-muted-foreground"
                             >
                               <ExternalLink className="size-3.5" />
                               Live Demo
