@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://amirsadat1980-lgtm.github.io/amirportfolio/sitemap.xml
