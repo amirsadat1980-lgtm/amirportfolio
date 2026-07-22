@@ -85,7 +85,7 @@ export function Hero() {
             </a>
           </Button>
           <Button asChild size="lg" variant="outline" className="glass">
-            <a href="#contact">
+            <a href={`mailto:${profile.email}`}>
               <Mail className="size-4" />
               Get In Touch
             </a>
