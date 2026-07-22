@@ -1,5 +1,5 @@
 import { lazy, Suspense } from "react";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { ArrowRight, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { GithubIcon, LinkedinIcon } from "@/components/icons/BrandIcons";
@@ -24,6 +24,8 @@ const item = {
 };
 
 export function Hero() {
+  const prefersReducedMotion = useReducedMotion();
+
   return (
     <section
       id="top"
@@ -38,7 +40,7 @@ export function Hero() {
       />
 
       <Suspense fallback={null}>
-        <Scene className="opacity-90" />
+        <Scene className="opacity-90" reducedMotion={prefersReducedMotion} />
       </Suspense>
 
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
@@ -123,8 +125,8 @@ export function Hero() {
         <div className="flex h-9 w-6 items-start justify-center rounded-full border border-border p-1">
           <motion.span
             className="h-1.5 w-1.5 rounded-full bg-primary"
-            animate={{ y: [0, 12, 0], opacity: [1, 0.3, 1] }}
-            transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
+            animate={prefersReducedMotion ? { opacity: 1 } : { y: [0, 12, 0], opacity: [1, 0.3, 1] }}
+            transition={prefersReducedMotion ? undefined : { duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
           />
         </div>
       </motion.div>
