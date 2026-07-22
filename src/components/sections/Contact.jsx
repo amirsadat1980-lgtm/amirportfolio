@@ -5,7 +5,12 @@ import { Button } from "@/components/ui/button";
 import { profile } from "@/data/profile";
 
 const links = [
-  { href: `mailto:${profile.email}`, label: profile.email, icon: Mail, external: false },
+  {
+    href: `https://mail.google.com/mail/?view=cm&fs=1&to=${profile.email}`,
+    label: profile.email,
+    icon: Mail,
+    external: true,
+  },
   { href: profile.github, label: "GitHub", icon: GithubIcon, external: true },
   { href: profile.linkedin, label: "LinkedIn", icon: LinkedinIcon, external: true },
 ];
