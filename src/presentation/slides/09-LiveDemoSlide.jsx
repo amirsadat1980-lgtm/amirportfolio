@@ -1,16 +1,11 @@
-import { SlideLayout } from "../components/SlideLayout";
+import { LiveDemo } from "@/components/sections/LiveDemo";
 
-// The actual embedded, working RAG demo (LiveDemo.jsx) is added in Phase 3
-// per the approved roadmap — this slide carries the real intro copy now.
+// Direct reuse of the same component the main site embeds — real backend,
+// same rate limiting/validation, not a screenshot or a re-implementation.
 export function LiveDemoSlide() {
   return (
-    <SlideLayout eyebrow="Try It Live" title="Live RAG demo" className="max-w-3xl">
-      <p className="mt-4 text-sm leading-relaxed text-muted-foreground sm:text-base">
-        Ask a question about Amir's work and get a real answer from a live
-        retrieval-augmented pipeline — not a canned response. It runs on a
-        serverless backend Amir designed and deployed himself, with rate
-        limiting, input validation, and CORS restrictions to prevent abuse.
-      </p>
-    </SlideLayout>
+    <div className="h-full w-full overflow-y-auto">
+      <LiveDemo />
+    </div>
   );
 }

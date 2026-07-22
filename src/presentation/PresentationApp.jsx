@@ -60,6 +60,8 @@ export function PresentationApp() {
         <AnimatePresence initial={false} custom={direction} mode="wait">
           <motion.div
             key={index}
+            ref={(el) => el?.focus({ preventScroll: true })}
+            tabIndex={-1}
             custom={direction}
             variants={prefersReducedMotion ? undefined : variants}
             initial={prefersReducedMotion ? { opacity: 0 } : "enter"}
@@ -73,7 +75,7 @@ export function PresentationApp() {
               if (info.offset.x < -SWIPE_THRESHOLD) next();
               else if (info.offset.x > SWIPE_THRESHOLD) prev();
             }}
-            className="h-full w-full"
+            className="h-full w-full outline-none"
           >
             <Component />
           </motion.div>
