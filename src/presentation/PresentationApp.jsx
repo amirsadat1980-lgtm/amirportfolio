@@ -1,7 +1,8 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { slides } from "./slides";
+import { slides, PROJECT_ORDER } from "./slides";
+import { ChapterProgress } from "./components/ChapterProgress";
 
 const SWIPE_THRESHOLD = 60;
 
@@ -38,9 +39,10 @@ export function PresentationApp() {
     return () => window.removeEventListener("keydown", onKeyDown);
   }, [next, prev]);
 
-  const { Component, title } = slides[index];
+  const { Component, title, project } = slides[index];
   const isFirst = index === 0;
   const isLast = index === slides.length - 1;
+  const projectIndex = project ? PROJECT_ORDER.indexOf(project) + 1 : 0;
 
   return (
     <div className="relative flex h-[100svh] w-full flex-col overflow-hidden bg-background">
@@ -93,7 +95,8 @@ export function PresentationApp() {
           <ChevronLeft className="size-4" />
         </button>
 
-        <div className="flex flex-col items-center gap-2">
+        <div className="flex flex-col items-center gap-1.5">
+          <ChapterProgress project={project} projectIndex={projectIndex} projectTotal={PROJECT_ORDER.length} />
           <span className="text-xs text-muted-foreground">
             {index + 1} / {slides.length}
           </span>
