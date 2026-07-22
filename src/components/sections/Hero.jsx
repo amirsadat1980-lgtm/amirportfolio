@@ -87,7 +87,11 @@ export function Hero() {
             </a>
           </Button>
           <Button asChild size="lg" variant="outline" className="glass">
-            <a href={`mailto:${profile.email}`}>
+            <a
+              href={`https://mail.google.com/mail/?view=cm&fs=1&to=${profile.email}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Mail className="size-4" />
               Get In Touch
             </a>
