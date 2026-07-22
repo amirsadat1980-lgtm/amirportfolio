@@ -1,5 +1,5 @@
 import { Mail } from "lucide-react";
-import { SlideLayout } from "../components/SlideLayout";
+import { SlideShell } from "../components/SlideShell";
 import { Button } from "@/components/ui/button";
 import { GithubIcon, LinkedinIcon } from "@/components/icons/BrandIcons";
 import { profile } from "@/data/profile";
@@ -16,7 +16,7 @@ const links = [
 
 export function ContactSlide() {
   return (
-    <SlideLayout eyebrow="Contact" title="Let's build something" className="max-w-2xl">
+    <SlideShell eyebrow="Contact" title="Let's build something" maxWidth="max-w-2xl">
       <div className="glass glow-border mt-8 flex flex-col items-center gap-6 rounded-2xl p-8 sm:p-10">
         <div className="flex flex-wrap items-center justify-center gap-4">
           {links.map(({ href, label, icon: Icon }) => (
@@ -29,6 +29,6 @@ export function ContactSlide() {
           ))}
         </div>
       </div>
-    </SlideLayout>
+    </SlideShell>
   );
 }

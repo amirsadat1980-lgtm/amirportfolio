@@ -1,4 +1,4 @@
-import { SlideLayout } from "../components/SlideLayout";
+import { SlideShell } from "../components/SlideShell";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { projects } from "@/data/projects";
@@ -8,7 +8,7 @@ const pair = projects.filter((p) => featuredTitles.includes(p.title));
 
 export function CaseStudyFrameworksSlide() {
   return (
-    <SlideLayout eyebrow="Case Study" title="Evaluation Framework & Content Workflow" className="max-w-5xl">
+    <SlideShell eyebrow="Case Study" title="Evaluation Framework & Content Workflow" maxWidth="max-w-5xl">
       <div className="mt-8 grid w-full gap-5 sm:grid-cols-2">
         {pair.map((project) => {
           const Icon = project.icon;
@@ -32,6 +32,6 @@ export function CaseStudyFrameworksSlide() {
           );
         })}
       </div>
-    </SlideLayout>
+    </SlideShell>
   );
 }

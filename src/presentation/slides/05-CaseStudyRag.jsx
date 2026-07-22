@@ -1,4 +1,4 @@
-import { SlideLayout } from "../components/SlideLayout";
+import { SlideShell } from "../components/SlideShell";
 import { Badge } from "@/components/ui/badge";
 import { projects } from "@/data/projects";
 
@@ -6,7 +6,7 @@ const project = projects.find((p) => p.title === "RAG Knowledge Assistant");
 
 export function CaseStudyRagSlide() {
   return (
-    <SlideLayout eyebrow="Case Study" title={project.title} className="max-w-4xl">
+    <SlideShell eyebrow="Case Study" title={project.title} maxWidth="max-w-4xl">
       {project.image && (
         <img
           src={project.image}
@@ -28,6 +28,6 @@ export function CaseStudyRagSlide() {
           {project.demoDisclosure}
         </p>
       )}
-    </SlideLayout>
+    </SlideShell>
   );
 }

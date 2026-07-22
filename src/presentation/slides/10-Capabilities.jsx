@@ -1,4 +1,4 @@
-import { SlideLayout } from "../components/SlideLayout";
+import { SlideShell } from "../components/SlideShell";
 import { skills } from "@/data/skills";
 import { experience } from "@/data/experience";
 
@@ -6,7 +6,7 @@ const current = experience.filter((e) => e.period === "Now" || e.period === "Ong
 
 export function CapabilitiesSlide() {
   return (
-    <SlideLayout eyebrow="Value" title="Key capabilities" className="max-w-4xl">
+    <SlideShell eyebrow="Value" title="Key capabilities" maxWidth="max-w-4xl">
       <div className="mt-8 grid w-full gap-4 sm:grid-cols-2">
         {[...skills, ...current].map((entry) => {
           const Icon = entry.icon;
@@ -22,6 +22,6 @@ export function CapabilitiesSlide() {
           );
         })}
       </div>
-    </SlideLayout>
+    </SlideShell>
   );
 }

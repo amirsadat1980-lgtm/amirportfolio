@@ -1,4 +1,4 @@
-import { SlideLayout } from "../components/SlideLayout";
+import { SlideShell } from "../components/SlideShell";
 import { projects } from "@/data/projects";
 import { skills } from "@/data/skills";
 
@@ -6,7 +6,7 @@ const techTags = [...new Set(projects.flatMap((p) => p.tech))];
 
 export function TechStackSlide() {
   return (
-    <SlideLayout eyebrow="Tools" title="Technologies & workflow" className="max-w-4xl">
+    <SlideShell eyebrow="Tools" title="Technologies & workflow" maxWidth="max-w-4xl">
       <ul className="mt-6 flex flex-wrap justify-center gap-2">
         {techTags.map((tag) => (
           <li
@@ -32,6 +32,6 @@ export function TechStackSlide() {
           );
         })}
       </div>
-    </SlideLayout>
+    </SlideShell>
   );
 }

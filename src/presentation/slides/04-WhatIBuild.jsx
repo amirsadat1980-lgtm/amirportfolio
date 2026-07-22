@@ -1,10 +1,10 @@
-import { SlideLayout } from "../components/SlideLayout";
+import { SlideShell } from "../components/SlideShell";
 import { Card, CardContent } from "@/components/ui/card";
 import { projects } from "@/data/projects";
 
 export function WhatIBuildSlide() {
   return (
-    <SlideLayout eyebrow="Overview" title="What I build" className="max-w-5xl">
+    <SlideShell eyebrow="Overview" title="What I build" maxWidth="max-w-5xl">
       <div className="mt-8 grid w-full gap-4 sm:grid-cols-2">
         {projects.map((project) => {
           const Icon = project.icon;
@@ -25,6 +25,6 @@ export function WhatIBuildSlide() {
           );
         })}
       </div>
-    </SlideLayout>
+    </SlideShell>
   );
 }

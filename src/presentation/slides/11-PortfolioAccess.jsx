@@ -1,11 +1,11 @@
 import { QRCodeSVG } from "qrcode.react";
-import { SlideLayout } from "../components/SlideLayout";
+import { SlideShell } from "../components/SlideShell";
 
 const PORTFOLIO_URL = "https://amirsadat1980-lgtm.github.io/amirportfolio/";
 
 export function PortfolioAccessSlide() {
   return (
-    <SlideLayout eyebrow="Explore More" title="Keep exploring" className="max-w-2xl">
+    <SlideShell eyebrow="Explore More" title="Keep exploring" maxWidth="max-w-2xl">
       <p className="mt-4 text-sm text-muted-foreground sm:text-base">
         The full portfolio — projects, live demo, and contact — is here:
       </p>
@@ -26,6 +26,6 @@ export function PortfolioAccessSlide() {
       >
         {PORTFOLIO_URL}
       </a>
-    </SlideLayout>
+    </SlideShell>
   );
 }

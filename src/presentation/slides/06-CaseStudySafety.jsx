@@ -1,11 +1,11 @@
-import { SlideLayout } from "../components/SlideLayout";
+import { SlideShell } from "../components/SlideShell";
 import { projects } from "@/data/projects";
 
 const project = projects.find((p) => p.title === "Prompt Safety & Evaluation Toolkit");
 
 export function CaseStudySafetySlide() {
   return (
-    <SlideLayout eyebrow="Case Study" title={project.title} className="max-w-4xl">
+    <SlideShell eyebrow="Case Study" title={project.title} maxWidth="max-w-4xl">
       <div className="mt-6 flex items-center justify-center gap-6 sm:gap-10">
         <div className="text-center">
           <p className="font-display glow-text text-4xl font-bold text-primary sm:text-6xl">100%</p>
@@ -25,6 +25,6 @@ export function CaseStudySafetySlide() {
           {project.demoDisclosure}
         </p>
       )}
-    </SlideLayout>
+    </SlideShell>
   );
 }
