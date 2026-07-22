@@ -2,6 +2,7 @@ import { lazy, Suspense } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { GithubIcon, LinkedinIcon } from "@/components/icons/BrandIcons";
 import { profile } from "@/data/profile";
 
 // The 3D scene pulls in three.js, by far the largest dependency in this
@@ -78,8 +79,8 @@ export function Hero() {
 
         <motion.div variants={item} className="mt-10 flex flex-wrap items-center justify-center gap-4">
           <Button asChild size="lg" className="group glow-border">
-            <a href="#projects">
-              View My Work
+            <a href="#featured-project">
+              View Featured Project
               <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
             </a>
           </Button>
@@ -89,6 +90,27 @@ export function Hero() {
               Get In Touch
             </a>
           </Button>
+        </motion.div>
+
+        <motion.div variants={item} className="mt-6 flex items-center justify-center gap-3">
+          <a
+            href={profile.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+            className="glass flex size-11 items-center justify-center rounded-full text-muted-foreground transition-all hover:-translate-y-1 hover:text-primary hover:glow-border"
+          >
+            <GithubIcon className="size-4" />
+          </a>
+          <a
+            href={profile.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+            className="glass flex size-11 items-center justify-center rounded-full text-muted-foreground transition-all hover:-translate-y-1 hover:text-primary hover:glow-border"
+          >
+            <LinkedinIcon className="size-4" />
+          </a>
         </motion.div>
       </motion.div>
 

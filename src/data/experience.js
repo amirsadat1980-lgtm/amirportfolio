@@ -5,7 +5,7 @@ export const experience = [
     period: "Now",
     title: "Building AI Automation & Workflow Tools",
     description:
-      "Building and testing LLM-backed systems — a RAG assistant, an evaluation framework, and a safety-testing toolkit — each with its own automated test suite.",
+      "Treating every prompt or pipeline change as something to test and measure, not just ship — the same discipline behind each project below.",
     icon: Hammer,
   },
   {

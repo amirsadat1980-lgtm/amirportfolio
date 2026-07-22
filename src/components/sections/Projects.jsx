@@ -19,7 +19,12 @@ export function Projects() {
             const Icon = project.icon;
             return (
               <Reveal key={project.title} delay={(i % 3) * 0.1}>
-                <Card className="glass group relative h-full gap-4 overflow-hidden border-border transition-all duration-300 hover:-translate-y-1.5 hover:glow-border">
+                <Card
+                  id={project.featured ? "featured-project" : undefined}
+                  className={`glass group relative h-full gap-4 overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:glow-border ${
+                    project.featured ? "glow-border scroll-mt-20 border-primary/40" : "border-border"
+                  }`}
+                >
                   {project.image && (
                     <div className="-mx-6 -mt-6 overflow-hidden">
                       <img
@@ -31,11 +36,25 @@ export function Projects() {
                     </div>
                   )}
                   <CardContent className="flex h-full flex-col text-center">
+                    {project.featured && (
+                      <Badge
+                        variant="outline"
+                        className="mx-auto mb-3 border-primary/50 text-primary uppercase tracking-wider"
+                      >
+                        Featured Project
+                      </Badge>
+                    )}
+
                     <div className="mx-auto flex size-12 items-center justify-center rounded-full bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
                       <Icon className="size-6" />
                     </div>
 
                     <h3 className="mt-5 text-lg font-bold">{project.title}</h3>
+                    {project.stat && (
+                      <Badge variant="secondary" className="mx-auto mt-2 text-secondary-foreground/90">
+                        {project.stat}
+                      </Badge>
+                    )}
                     <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                       {project.description}
                     </p>
