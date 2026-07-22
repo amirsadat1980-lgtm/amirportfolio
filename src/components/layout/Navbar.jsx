@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Menu } from "lucide-react";
+import { Menu, Presentation } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
 
@@ -10,6 +10,8 @@ const links = [
   { href: "#experience", label: "Experience" },
   { href: "#contact", label: "Contact" },
 ];
+
+const presentationHref = `${import.meta.env.BASE_URL}presentation.html`;
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -54,6 +56,17 @@ export function Navbar() {
                 </a>
               </li>
             ))}
+            <li>
+              <a
+                href={presentationHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-shadow-soft flex items-center gap-1.5 text-sm font-medium text-foreground/90 transition-colors hover:text-primary"
+              >
+                <Presentation className="size-4" />
+                Presentation
+              </a>
+            </li>
           </ul>
         </nav>
 
@@ -81,6 +94,16 @@ export function Navbar() {
                   {link.label}
                 </a>
               ))}
+              <a
+                href={presentationHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setOpen(false)}
+                className="flex items-center gap-2 rounded-md px-2 py-3 text-base font-medium text-foreground/90 transition-colors hover:bg-white/5 hover:text-primary"
+              >
+                <Presentation className="size-4" />
+                Presentation
+              </a>
             </nav>
           </SheetContent>
         </Sheet>

@@ -47,6 +47,7 @@ export const projects = [
     tech: ["Python", "OpenAI API", "Pandas", "Streamlit"],
     detailed: true,
     stat: "27 tests passing",
+    status: "Case Study",
     githubUrl: "https://github.com/amirsadat1980-lgtm/prompt-evaluation-framework",
     liveDemo: "https://amirsadat1980-lgtm.github.io/prompt-evaluation-framework/",
     image: asset("images/prompt-evaluation-framework.png"),
