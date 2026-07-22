@@ -7,7 +7,9 @@ export const projects = [
     title: "RAG Knowledge Assistant",
     category: "AI Assistants",
     description:
-      "A retrieval-augmented assistant that cites its source document for every answer and explicitly declines to guess when the documents don't cover a question — verified by 21 automated tests covering ingestion, retrieval, and source attribution.",
+      "Retrieval-augmented systems can answer confidently with no real support in the source text. This assistant turns your documents into embeddings for retrieval, cites the exact source for every answer, and declines to guess when it isn't covered — verified by 21 automated tests.",
+    demoDisclosure:
+      "Live Demo runs on the same deterministic backend used in the automated tests — reproducible, no API key required.",
     icon: Database,
     tech: ["Python", "OpenAI API", "LangChain", "Vector Database", "RAG"],
     detailed: true,
@@ -22,7 +24,9 @@ export const projects = [
     title: "AI Content Quality Workflow",
     category: "AI Workflow Automation",
     description:
-      "An automated content-QA pipeline that scores drafts against five criteria (length, keywords, CTA, banned terms, readability) and applies deterministic fixes — with 20 tests covering every scorer and the revision logic.",
+      "Manual content review is inconsistent — \"looks fine\" isn't a repeatable bar. This pipeline scores drafts against five explicit criteria (length, keywords, CTA, banned terms, readability) and applies deterministic fixes, covered by 20 tests.",
+    demoDisclosure:
+      "Live Demo runs on the same deterministic backend used in the automated tests — reproducible, no API key required.",
     icon: ClipboardCheck,
     tech: ["Prompt Engineering", "OpenAI API", "Python", "Automation", "Content QA"],
     detailed: true,
@@ -36,7 +40,9 @@ export const projects = [
     title: "Prompt Evaluation Framework",
     category: "Prompt Engineering",
     description:
-      "A five-criteria evaluation harness (accuracy, relevance, clarity, consistency, instruction-following) for comparing prompt versions with reproducible, offline-scored results — 27 tests, plus a real sample run showing a concrete length-vs-fidelity tradeoff between three prompt iterations.",
+      "\"I improved the prompt\" is usually a feeling, not a measured claim. This harness compares prompt versions — including a few-shot variant — against five explicit criteria (accuracy, relevance, clarity, consistency, instruction-following); a real sample run surfaces a concrete length-vs-fidelity tradeoff across 27 tests.",
+    demoDisclosure:
+      "Live Demo runs on the same deterministic backend used in the automated tests — reproducible, no API key required.",
     icon: FlaskConical,
     tech: ["Python", "OpenAI API", "Pandas", "Streamlit"],
     detailed: true,
@@ -49,7 +55,9 @@ export const projects = [
     title: "Prompt Safety & Evaluation Toolkit",
     category: "Prompt Engineering",
     description:
-      "A safety-testing harness that checks whether a system prompt actually refuses unsafe requests, resists prompt injection, and stays consistent across repeated runs — in the bundled example, a well-specified prompt scored 100% consistency versus 64% for a bare \"you are a helpful assistant\" prompt.",
+      "A system prompt can look safe on paper yet behave inconsistently in practice. This harness checks whether a prompt actually refuses unsafe requests, resists prompt injection, and stays consistent across repeated runs — in the bundled example, a well-specified prompt scored 100% consistency versus 64% for a bare \"you are a helpful assistant\" prompt.",
+    demoDisclosure:
+      "Live Demo runs on the same deterministic backend used in the automated tests — reproducible, no API key required.",
     icon: ShieldCheck,
     tech: ["Prompt Evaluation", "Python", "Test Cases", "LLM Safety", "Analytics"],
     detailed: true,

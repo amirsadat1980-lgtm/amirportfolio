@@ -58,6 +58,11 @@ export function Projects() {
                     <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                       {project.description}
                     </p>
+                    {project.demoDisclosure && (
+                      <p className="mt-2 text-xs leading-relaxed text-muted-foreground/70">
+                        {project.demoDisclosure}
+                      </p>
+                    )}
 
                     {project.detailed && (
                       <>
