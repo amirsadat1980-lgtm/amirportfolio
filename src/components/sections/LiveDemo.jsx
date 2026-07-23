@@ -4,6 +4,7 @@ import { ChevronDown, Loader2, Sparkles } from "lucide-react";
 import { Reveal } from "@/components/motion/Reveal";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 
 const DEMO_API_URL = import.meta.env.VITE_DEMO_API_URL;
@@ -77,6 +78,12 @@ export function LiveDemo() {
         <Reveal className="text-center">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary">Try It Live</p>
           <h2 className="font-display mt-3 text-3xl font-bold sm:text-4xl">RAG Q&A demo</h2>
+          {DEMO_API_URL && (
+            <Badge variant="outline" className="mx-auto mt-3 border-primary/40 text-primary">
+              <span className="mr-1 inline-block size-1.5 rounded-full bg-primary" />
+              Live response · Powered by OpenAI
+            </Badge>
+          )}
           <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
             Ask a question about Amir's work and get a real answer from a live
             retrieval-augmented pipeline — not a canned response. It runs on a

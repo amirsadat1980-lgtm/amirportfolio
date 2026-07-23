@@ -22,6 +22,7 @@ export function SlideShell({
         )}
       </div>
       <div
+        data-slide-content
         className={`mt-4 flex min-h-0 flex-1 flex-col items-center justify-center ${scrollable ? "overflow-y-auto" : "overflow-hidden"} ${contentClassName}`}
       >
         {children}

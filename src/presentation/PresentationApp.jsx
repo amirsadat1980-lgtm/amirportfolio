@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { slides, PROJECT_ORDER } from "./slides";
+import { slides, PROJECT_ORDER, PROJECT_START_INDEX } from "./slides";
 import { ChapterProgress } from "./components/ChapterProgress";
 
 const SWIPE_THRESHOLD = 60;
@@ -79,7 +79,7 @@ export function PresentationApp() {
             }}
             className="h-full w-full outline-none"
           >
-            <Component />
+            <Component goTo={goTo} projectStartIndex={PROJECT_START_INDEX} />
           </motion.div>
         </AnimatePresence>
       </main>
